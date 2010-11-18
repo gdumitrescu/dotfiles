@@ -1,0 +1,47 @@
+[color]
+	ui = true
+	interactive = true 
+[color "branch"]
+	current = yellow reverse
+	local = red
+	remote = green reverse
+[color "diff"]
+	meta = cyan
+	frag = cyan reverse
+	new = green
+	old = red
+	whitespace = red reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[merge]
+	tool = opendiff
+[alias]
+    co = checkout
+    ci = commit -v
+    ca = commit --amend
+    unstage = reset HEAD
+    rollback = reset --soft HEAD^
+    glog = log --graph
+    slog = log --stat --summary    
+    plog = log --pretty=oneline
+    st = status
+    br = branch
+    df = diff
+    who = shortlog -s --
+    edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
+    su = submodule update
+    sui = submodule update --init
+	last = log -1 HEAD
+    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+    pick = add -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[gc]
+	auto = 0
+[diff "word"]
+    textconv=catdoc
+[diff "excel"]
+    textconv=csv2xml
