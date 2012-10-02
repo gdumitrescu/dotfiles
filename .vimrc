@@ -4,7 +4,41 @@ set runtimepath=~/.vim,$VIMRUNTIME
 set encoding=utf8
 set fileencoding=utf8
 
-"set bg=dark
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage bundles
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'kchmck/vim-coffee-script.git'
+"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+Bundle 'scrooloose/syntastic.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'drichard/vim-brunch.git'
+Bundle 'carlhuda/janus.git'
+Bundle 'mattn/zencoding-vim.git'
+
+" vim-scripts repos
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
+"Bundle 'vim-scripts/FuzzyFinder.git'
+
+" non github repos
+" Bundle Command-T
+" Bundle 'git://git.wincent.com/command-t.git'
+
+" appearance options
+set bg=dark
 set t_Co=255
 colorscheme ir_black 
 
