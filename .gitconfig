@@ -29,6 +29,9 @@
     st = status
     br = branch
     df = diff
+    dfc = diff --cached
+    dhf = diff HEAD --
+    dfs = diff --stat
     who = shortlog -s --
     edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
     su = submodule update
