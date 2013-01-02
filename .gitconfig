@@ -42,6 +42,9 @@
     pick = add -p
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    rmdf = !git rm $(git ls-files --deleted)                                                                              
+    auto-clean = clean -fd                                                                                             
+    auto-remove = clean -fdx
 [gc]
 	auto = 0
 [diff "word"]
