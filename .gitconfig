@@ -18,36 +18,36 @@
 [merge]
 	tool = opendiff
 [alias]
-    co = checkout
-    ci = commit -v
-    ca = commit --amend
-    unstage = reset HEAD
-    rollback = reset --soft HEAD^
-    glog = log --graph
-    slog = log --stat --summary    
-    plog = log --pretty=oneline
-    st = status
-    br = branch
-    df = diff
-    dfc = diff --cached
-    dhf = diff HEAD --
-    dfs = diff --stat
-    who = shortlog -s --
-    edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
-    su = submodule update
-    sui = submodule update --init
-	last = log -1 HEAD
-    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
-    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-    pick = add -p
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    rmdf = !git rm $(git ls-files --deleted)                                                                              
-    auto-clean = clean -fd                                                                                             
-    auto-remove = clean -fdx
+  co = checkout
+  ci = commit -v
+  ca = commit --amend
+  unstage = reset HEAD
+  rollback = reset --soft HEAD^
+  glog = log --graph
+  slog = log --stat --summary    
+  plog = log --pretty=oneline
+  st = status
+  br = branch
+  df = diff
+  dfc = diff --cached
+  dhf = diff HEAD --
+  dfs = diff --stat
+  who = shortlog -s --
+  edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
+  su = submodule update
+  sui = submodule update --init
+  last = log -1 HEAD
+  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  pick = add -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  rmdf = !git rm $(git ls-files --deleted)                                                                              
+  auto-clean = clean -fd                                                                                             
+  auto-remove = clean -fdx
 [gc]
 	auto = 0
 [diff "word"]
-    textconv=catdoc
+  textconv=catdoc
 [diff "excel"]
-    textconv=csv2xml
+  textconv=csv2xml
