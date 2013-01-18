@@ -46,7 +46,9 @@
   auto-clean = clean -fd                                                                                             
   auto-remove = clean -fdx
 [gc]
-	auto = 0
+  auto = 0
+[diff]
+  noprefix = true
 [diff "word"]
   textconv=catdoc
 [diff "excel"]
