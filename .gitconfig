@@ -1,22 +1,22 @@
 [color]
-	ui = true
-	interactive = true 
+  ui = true
+  interactive = true 
 [color "branch"]
-	current = yellow reverse
-	local = red
-	remote = green reverse
+  current = yellow reverse
+  local = red
+  remote = green reverse
 [color "diff"]
-	meta = cyan
-	frag = cyan reverse
-	new = green
-	old = red
-	whitespace = red reverse
+  meta = cyan
+  frag = cyan reverse
+  new = green
+  old = red
+  whitespace = red reverse
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 [merge]
-	tool = opendiff
+  tool = opendiff
 [alias]
   co = checkout
   ci = commit -v
@@ -45,6 +45,8 @@
   rmdf = !git rm $(git ls-files --deleted)                                                                              
   auto-clean = clean -fd                                                                                             
   auto-remove = clean -fdx
+  prev = checkout HEAD^1                                                                                                
+  next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
 [gc]
   auto = 0
 [diff]
