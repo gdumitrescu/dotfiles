@@ -1,5 +1,3 @@
-"set runtimepath=~/.vim,$VIMRUNTIME,~/.vim/after
-
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -13,40 +11,46 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 
-" original repos on github
-Bundle 'mattn/zencoding-vim.git'
-Bundle 'carlhuda/janus.git'
-Bundle 'drichard/vim-brunch.git'
-Bundle 'kchmck/vim-coffee-script.git'
+" UTILS
+" Ctrl-P fuzzy file finder
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" parser for a condensed HTML
+"Bundle 'rstacruz/sparkup.git'
+" Tree explorer
+Bundle 'scrooloose/nerdtree.git'
+" Tree explorer tabs
+Bundle 'jistr/vim-nerdtree-tabs.git'
+" Syntax checking
 Bundle 'scrooloose/syntastic.git'
-
-" Ultimate auto-completion system for Vim 
-" Set let g:neocomplcache_enable_at_startup = 1 in .vimrc
-Bundle 'Shougo/neocomplcache.git'
+" Powerline status line
+Bundle 'Lokaltog/vim-powerline.git'
+" Utility functions and commands for programming in Vim.
+Bundle 'vim-scripts/L9.git'
+" buffer/file/command/tag/etc explorer with fuzzy matching
+" Bundle 'vim-scripts/FuzzyFinder.git'
+" CoVim - real-time collaboration
+"Bundle 'FredKSchott/CoVim'
 
 " GIT
 " Git wrapper
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
 Bundle 'airblade/vim-gitgutter.git'
 " Gist
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim.git'
 
+
 " RUBY
 " Turbo Ruby tests with tmux
 Bundle 'vim-scripts/turbux.vim.git'
+Bundle 'tpope/vim-rails.git'
 
-" Auto display function parameter in preview
-" Bundle 'vim-scripts/autoproto.vim.git'
-" Utility functions and commands for programming in Vim.
-Bundle 'vim-scripts/L9.git'
-" buffer/file/command/tag/etc explorer with fuzzy matching
-Bundle 'vim-scripts/FuzzyFinder.git'
 
 " EDITOR
+Bundle 'drichard/vim-brunch.git'
+Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'mattn/zencoding-vim.git'
 " Jade syntax and indenting       
 Bundle 'vim-scripts/jade.vim.git'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
@@ -57,13 +61,18 @@ Bundle 'majutsushi/tagbar.git'
 Bundle 'maksimr/vim-jsbeautify'
 " quoting/parenthesizing made simple
 Bundle 'tpope/vim-surround.git' 
+" ack - front for the Perl module
+Bundle 'mileszs/ack.vim.git'
 " ag, A.K.A. the_silver_searcher
 Bundle 'rking/ag.vim'
 " multiple selections
 Bundle 'terryma/vim-multiple-cursors.git'
+" Ultimate auto-completion system for Vim 
+" Set let g:neocomplcache_enable_at_startup = 1 in .vimrc
+Bundle 'Shougo/neocomplcache.git'
+" Auto display function parameter in preview
+" Bundle 'vim-scripts/autoproto.vim.git'
 
-" Powerline status line
-Bundle 'Lokaltog/vim-powerline.git'
 
 " Appearance options
 set bg=dark
@@ -89,7 +98,7 @@ set nowrap " don't wrap on load
 set fo-=t " don't wrap text when typing
 
 "set colorcolumn=120
-"highlight ColorColumn ctermbg=233
+highlight ColorColumn ctermbg=233
 if exists('&colorcolumn')
   set colorcolumn=80
 endif
@@ -155,11 +164,6 @@ map <Leader>v :e! ~/.vimrc<CR>
 
 " Fast saving
 nmap <Leader>w :w!<cr>
-
-"Quick save command                                                                                                                                                                             
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-0>:update<CR>
 
 " tab navigation like firefox
 nmap <Leader>tn :tabnext<cr>
@@ -240,7 +244,7 @@ let g:python_highlight_numbers = 1
 " Configure syntax specific options
 let python_highlight_all = 1
 
-"Enable CoffeeScript
+" Enable CoffeeScript
 "let coffee_make_options = '--bare'
 "let coffee_compile_vert = 1
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
@@ -256,6 +260,8 @@ inoremap <C-Z> <C-0>:update<CR>
 "
 " Configure plugins
 "
+" ack
+let g:ackprg="ack -H --nogroup --nocolor --column"
 " Ag
 let g:agprg="ag --nogroup --nocolor --column"
 
@@ -273,10 +279,6 @@ let g:ctrlp_max_height = 10
 "  \ 'file': '\v\.(exe|so|dll)$',
 "  \ 'link': 'some_bad_symbolic_links',
 "  \ }
-
-" FuzzyFinder
-map <Leader>ff :FufFile<CR>
-map <Leader>ffbd :FufFileWithCurrentBufferDir<CR>
 
 " Gist
 "let g:gist_use_password_in_gitconfig = 1
@@ -312,10 +314,31 @@ let g:multi_cursor_quit_key='<Esc>'
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
 
+"NERDTree
+" load on startup
+"autocmd vimenter * NERDTree
+" close when last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"NERDTreeTabs
+let g:nerdtree_tabs_open_on_gui_startup=1
+"map <Leader>t <plug>NERDTreeTabsToggle<CR>
+map <Leader>kb :NERDTreeTabsToggle<CR>
+
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
+
+" Sparkup
+"Location of the sparkup executable. You shouldn't need to change this setting if you used the install option above.
+let g:sparkup='sparkup' "(Default: 'sparkup') -
+
+"Mapping used to execute sparkup.
+let g:sparkupExecuteMapping = '<C-e>' "(Default: '<c-e>') -
+
+"Syntastic
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
 "noremap : q:I
