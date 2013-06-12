@@ -1,0 +1,13 @@
+#"\e[A": history-search-backward
+#"\e[B": history-search-forward
+#set show-all-if-ambiguous on
+set completion-ignore-case on
+#
+#
+##For the current user:
+#echo "set completion-ignore-case on" >> ~/.inputrc
+#
+##System wide:
+#echo "set completion-ignore-case on" >> /etc/inputrc
+#
+set bell-style none
