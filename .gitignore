@@ -1,0 +1,37 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.swp
+
+# Specific #
+############
+node_modules/*
+target/**
+test-output
+test-output/**
+.bundle/
+.svn/
+.sass-cache/
+.jhw-cache/
+_SpecRunner.html
+.bowerrc
+.project
+.pydevproject
+local.properties
+
+# IDE file Specific #
+#####################
+.editorconfig
+.idea
+*.iml
+
+# Mac #
+#######
+*.DS_Store
+/target
+
