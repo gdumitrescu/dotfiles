@@ -122,7 +122,7 @@ set virtualedit=block
 set clipboard=unnamed  " Yanks go on clipboard instead.
 set showmatch " Show matching braces.
 
-" Histroty and undo
+" History and undo
 set history=100 " keep track of last commands
 set undolevels=100 " number od undo commands
 
@@ -251,6 +251,10 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab nofoldenable
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 ":setl scrollbind
+
+" Run current file in ruby
+imap <Leader>rr <ESC>:!ruby %<CR>
+nmap <Leader>rr :!ruby %<CR>
 
 " Quick save command
 noremap <C-Z> :update<CR>
