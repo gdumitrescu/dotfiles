@@ -56,3 +56,5 @@
   textconv=catdoc
 [diff "excel"]
   textconv=csv2xml
+[rerere]
+  enabled = true
