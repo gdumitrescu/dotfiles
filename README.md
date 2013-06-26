@@ -19,5 +19,5 @@
  - TODO: use [fresh](https://github.com/freshshell/fresh) to install/manage dotfiles
 
 ### Thanks
- Github users: scrooloose and akitaonrails for vim color schemes
- Nitrous.IO: for the free box
+ - Github users: scrooloose and akitaonrails for vim color schemes
+ - Nitrous.IO: for the free box
