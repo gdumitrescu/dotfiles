@@ -10,6 +10,8 @@
  ```bash
  $ cd ~
  $ wget https://raw.github.com/gdumitrescu/dotfiles/master/.gitignore
+ $ wget https://raw.github.com/gdumitrescu/dotfiles/master/.gitignore_global
+ $ wget https://raw.github.com/gdumitrescu/dotfiles/master/.gitconfig
  $ wget https://raw.github.com/gdumitrescu/dotfiles/master/.tmux.conf
  $ wget https://raw.github.com/gdumitrescu/dotfiles/master/.vimrc
  $ mkdir -p .vim/colors
