@@ -58,3 +58,6 @@
   textconv=csv2xml
 [rerere]
   enabled = true
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
