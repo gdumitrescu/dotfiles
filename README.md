@@ -1,6 +1,6 @@
 ### Collection of my dotfiles
 
- - BASIC SETUP: on your local machine or your free [Nitrous.IO](http://nitrous.io) instance.
+ - BASIC SETUP: on your local machine or your free [Nitrous.IO](https://www.nitrous.io/join/7aNCJh74rfk) instance.
  
  ```bash
  $ https://github.com/gdumitrescu/dotfiles ~/
