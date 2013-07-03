@@ -26,6 +26,7 @@
   glog = log --graph
   slog = log --stat --summary    
   plog = log --pretty=oneline
+  tree = log --pretty=oneline --abbrev-commit --decorate --graph --all
   st = status
   br = branch
   df = diff
@@ -33,10 +34,15 @@
   dhf = diff HEAD --
   dfs = diff --stat
   who = shortlog -s --
+  count = shortlog -sn
   edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
+  edit-conflicts = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
   su = submodule update
   sui = submodule update --init
+  suir = submodule update --init --recursive
   last = log -1 HEAD
+  last-local = show-branch -r --list
+  last-all = show-branch -r --list
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
   pick = add -p
@@ -46,8 +52,10 @@
   rmdf = !git rm $(git ls-files --deleted)                                                                              
   auto-clean = clean -fd                                                                                             
   auto-remove = clean -fdx
+  find = "!func() { git grep $1 $(git rev-list --all); }; func"
   prev = checkout HEAD^1                                                                                                
   next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
+  lsch = "!f() { git diff --name-status -r \"HEAD~$1\"; }; f"
 [gc]
   auto = 0
 [diff]
