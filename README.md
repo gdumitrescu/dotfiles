@@ -1,4 +1,4 @@
-### Collection of my dotfiles
+### Collection of my dotfiles [![endorse](http://api.coderwall.com/gdumitrescu/endorsecount.png)](http://coderwall.com/gdumitrescu)
 
  - BASIC SETUP: on your local machine or your free [Nitrous.IO](https://www.nitrous.io/join/7aNCJh74rfk) instance.
  
