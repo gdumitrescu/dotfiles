@@ -1,4 +1,4 @@
 {
-  "directory" : "vendor/assets/javascripts",
+  "directory" : "vendor/assets",
   "json"      : "component.json"
 }
