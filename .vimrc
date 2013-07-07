@@ -49,6 +49,7 @@ Bundle 'tpope/vim-rails.git'
 
 " EDITOR
 Bundle 'drichard/vim-brunch.git'
+" CoffeeScript support for vim
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'mattn/zencoding-vim.git'
 " Jade syntax and indenting       
@@ -245,12 +246,12 @@ let g:python_highlight_numbers = 1
 let python_highlight_all = 1
 
 " Enable CoffeeScript
-"let coffee_make_options = '--bare'
-"let coffee_compile_vert = 1
+let coffee_make_options = '--bare'
+let coffee_compile_vert = 1
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab nofoldenable
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab nofoldenable
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-":setl scrollbind
+:setl scrollbind
 
 " Run current file in ruby
 imap <Leader>rr <ESC>:!ruby %<CR>
