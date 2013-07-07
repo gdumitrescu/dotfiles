@@ -14,9 +14,8 @@ Bundle 'gmarik/vundle'
 " UTILS
 " Ctrl-P fuzzy file finder
 Bundle 'kien/ctrlp.vim.git'
+" Sparkup lets you write HTML code faster
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" parser for a condensed HTML
-"Bundle 'rstacruz/sparkup.git'
 " Tree explorer
 Bundle 'scrooloose/nerdtree.git'
 " Tree explorer tabs
@@ -340,7 +339,7 @@ nmap <F8> :TagbarToggle<CR>
 let g:sparkup='sparkup' "(Default: 'sparkup') -
 
 "Mapping used to execute sparkup.
-let g:sparkupExecuteMapping = '<C-e>' "(Default: '<c-e>') -
+let g:sparkupExecuteMapping = '<c-e>' "(Default: '<c-e>') -
 
 "Syntastic
 let g:syntastic_python_checkers=['pylint']
