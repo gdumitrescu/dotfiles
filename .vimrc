@@ -75,7 +75,6 @@ Bundle 'Shougo/neocomplcache.git'
 
 " Appearance options
 set bg=dark
-let g:zenburn_high_Contrast = 1
 set t_Co=256
 colorscheme railscasts2
 
