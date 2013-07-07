@@ -50,7 +50,6 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'drichard/vim-brunch.git'
 " CoffeeScript support for vim
 Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'mattn/zencoding-vim.git'
 " Jade syntax and indenting       
 Bundle 'vim-scripts/jade.vim.git'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
