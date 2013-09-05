@@ -1,6 +1,7 @@
+require 'rubygems'
+require 'interactive_editor'
 require "irb"
 require 'irb/completion'
-require 'rubygems'
 require 'map_by_method'
 require 'what_methods'
 require 'pp'
