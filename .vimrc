@@ -29,7 +29,7 @@ Bundle 'vim-scripts/L9.git'
 " buffer/file/command/tag/etc explorer with fuzzy matching
 " Bundle 'vim-scripts/FuzzyFinder.git'
 " CoVim - real-time collaboration
-Bundle 'FredKSchott/CoVim'
+"Bundle 'FredKSchott/CoVim'
 
 " GIT
 " Git wrapper
