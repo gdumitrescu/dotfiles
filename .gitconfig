@@ -38,9 +38,9 @@
   count = shortlog -sn
   edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
   edit-conflicts = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
-  su = submodule update
-  sui = submodule update --init
-  suir = submodule update --init --recursive
+  sub = submodule update
+  subi = submodule update --init
+  subir = submodule update --init --recursive
   last = log -1 HEAD
   last-local = show-branch -r --list
   last-all = show-branch -r --list
