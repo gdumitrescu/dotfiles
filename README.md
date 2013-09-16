@@ -26,4 +26,4 @@
 
 ### Thanks
  - Github users: scrooloose and akitaonrails for vim color schemes
- - Nitrous.IO: for the free box
+ - Nitrous.IO and Koding: for the free box
