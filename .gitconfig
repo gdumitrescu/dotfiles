@@ -34,6 +34,7 @@
   dfc = diff --cached
   dhf = diff HEAD --
   dfs = diff --stat
+  dfw = diff -w
   who = shortlog -s --
   count = shortlog -sn
   edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
