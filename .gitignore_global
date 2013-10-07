@@ -39,7 +39,7 @@ Thumbs.db
 ############
 node_modules/*
 target/**/*
-vendor/*
+vendor/ruby/*
 local.properties
 .project
 .pydevproject
