@@ -27,3 +27,7 @@
 ### Thanks
  - Github users: scrooloose and akitaonrails for vim color schemes
  - Nitrous.IO and Koding: for the free box
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gdumitrescu/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
