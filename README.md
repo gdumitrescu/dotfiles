@@ -3,7 +3,7 @@
  - BASIC SETUP: on your local machine or your free [Nitrous.IO](https://www.nitrous.io/join/7aNCJh74rfk) or [Koding](https://koding.com/?r=gdumitrescu) instance.
  
  ```bash
- $ https://github.com/gdumitrescu/dotfiles ~/
+ $ git clone https://github.com/gdumitrescu/dotfiles.git ~/
  ```
  or run the following commands:
  
