@@ -5,7 +5,7 @@
 #echo "" | tee -a ~/bin/bashrc-defaults.sh
 
 echo "alias gti='git'" | tee -a ~/bin/bashrc-defaults.sh
-echo "alias server='python -m SimpleHTTPServer $1'" | tee -a ~/bin/bashrc-defaults.sh
+echo "alias server='python -m SimpleHTTPServer \$1'" | tee -a ~/bin/bashrc-defaults.sh
 
 echo "wget -O ~/.gitconfig https://raw.github.com/gdumitrescu/dotfiles/master/.gitconfig" | tee -a ~/bin/bashrc-defaults.sh
 echo "wget -O ~/.gitignore https://raw.github.com/gdumitrescu/dotfiles/master/.gitignore" | tee -a ~/bin/bashrc-defaults.sh
