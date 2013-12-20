@@ -75,3 +75,5 @@
   merge = refs/heads/master
 [core]
   excludesfiles = ~/.gitignore_global
+[push]
+  default = simple
