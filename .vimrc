@@ -23,7 +23,9 @@ Bundle 'jistr/vim-nerdtree-tabs.git'
 " Syntax checking
 Bundle 'scrooloose/syntastic.git'
 " Powerline status line
-Bundle 'Lokaltog/vim-powerline.git'
+"Bundle 'Lokaltog/vim-powerline.git'
+" Lean & mean status/tabline for vim that's light as air
+Bundle 'bling/vim-airline'
 " Utility functions and commands for programming in Vim.
 Bundle 'vim-scripts/L9.git'
 " buffer/file/command/tag/etc explorer with fuzzy matching
@@ -47,6 +49,7 @@ Bundle 'tpope/vim-rails.git'
 
 
 " EDITOR
+" Brunch support for vim
 Bundle 'drichard/vim-brunch.git'
 " CoffeeScript support for vim
 Bundle 'kchmck/vim-coffee-script.git'
@@ -71,6 +74,8 @@ Bundle 'terryma/vim-multiple-cursors.git'
 Bundle 'Shougo/neocomplcache.git'
 " Auto display function parameter in preview
 " Bundle 'vim-scripts/autoproto.vim.git'
+" TernJS for vim
+"Bundle 'marijnh/tern_for_vim'
 
 
 " Appearance options
@@ -267,6 +272,12 @@ let g:ackprg="ack -H --nogroup --nocolor --column"
 " Ag
 let g:agprg="ag --nogroup --nocolor --column"
 
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_powerline_fonts = 1
+
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -327,7 +338,7 @@ let g:nerdtree_tabs_open_on_gui_startup=1
 map <Leader>kb :NERDTreeTabsToggle<CR>
 
 " Powerline
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
