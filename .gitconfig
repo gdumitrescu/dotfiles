@@ -62,6 +62,7 @@
   lsch = "!f() { git diff --name-status -r \"HEAD~$1\"; }; f"
   timesheet = "log --since='1 sunday ago' --until=now --oneline --no-merges"
   standup = "log --since='yesterday.midnight' --until=midnight --oneline --no-merges"
+  lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 [gc]
   auto = 0
 [diff]
