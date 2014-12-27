@@ -18,15 +18,17 @@
  $ wget https://raw.github.com/gdumitrescu/dotfiles/master/vim/.vimrc
  $ mkdir -p .vim/colors
  $ cd .vim/colors
- $ wget https://raw.github.com/scrooloose/vimfiles/master/colors/railscasts.vim
+ $ wget https://raw.github.com/akitaonrails/vimfiles/master/colors/ir_black.vim
+ $ wget https://raw.github.com/akitaonrails/vimfiles/master/colors/railscasts.vim
  $ wget https://raw.github.com/akitaonrails/vimfiles/master/colors/railscasts2.vim
+ $ wget https://raw.github.com/akitaonrails/vimfiles/master/colors/zenburn.vim
  $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
  $ vim +BundleInstall +qall
  ```
 
 
 ### Thanks
- - Github users: scrooloose and akitaonrails for vim color schemes
+ - Github user: akitaonrails for vim color schemes
  - Nitrous.IO and Koding: for the VMs
 
 
