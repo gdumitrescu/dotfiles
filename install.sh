@@ -3,11 +3,11 @@
 # install default settings
 
 cd ~
-wget https://raw.github.com/gdumitrescu/dotfiles/master/.gitignore
-wget https://raw.github.com/gdumitrescu/dotfiles/master/.gitignore_global
-wget https://raw.github.com/gdumitrescu/dotfiles/master/.gitconfig
-wget https://raw.github.com/gdumitrescu/dotfiles/master/.tmux.conf
-wget https://raw.github.com/gdumitrescu/dotfiles/master/.vimrc
+wget https://raw.github.com/gdumitrescu/dotfiles/master/git/.gitignore
+wget https://raw.github.com/gdumitrescu/dotfiles/master/git/.gitignore_global
+wget https://raw.github.com/gdumitrescu/dotfiles/master/git/.gitconfig
+wget https://raw.github.com/gdumitrescu/dotfiles/master/tmux/.tmux.conf
+wget https://raw.github.com/gdumitrescu/dotfiles/master/vim/.vimrc
 mkdir -p .vim/colors
 cd .vim/colors
 wget https://raw.github.com/scrooloose/vimfiles/master/colors/railscasts.vim
