@@ -11,6 +11,7 @@ alias touchon='xinput --set-prop "AlpsPS/2 ALPS GlidePoint" "Device Enabled" 1'
 # Docker
 alias machine='docker-machine'
 alias compose='docker-compose'
+alias fig='docker-compose'
 
 # Docker environment variables
 alias de="env | grep DOCKER_"

@@ -1,6 +1,6 @@
 [color]
   ui = true
-  interactive = true 
+  interactive = true
 [color "branch"]
   current = yellow reverse
   local = red
@@ -17,15 +17,17 @@
   untracked = cyan
 [merge]
   tool = opendiff
+  conflictstyle = diff3
 [alias]
   co = checkout
   ci = commit -v
+  dci = duet-commit -v
   ca = commit --amend
   unstage = reset HEAD
   rollback = reset --soft HEAD^
   glog = log --graph
   llog = log --date=local
-  slog = log --stat --summary    
+  slog = log --stat --summary
   plog = log --pretty=oneline
   tree = log --pretty=oneline --abbrev-commit --decorate --graph --all
   st = status
@@ -53,11 +55,11 @@
   llog = log --date=local
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  rmdf = !git rm $(git ls-files --deleted)                                                                              
-  auto-clean = clean -fd                                                                                             
+  rmdf = !git rm $(git ls-files --deleted)
+  auto-clean = clean -fd
   auto-remove = clean -fdx
   find = "!func() { git grep $1 $(git rev-list --all); }; func"
-  prev = checkout HEAD^1                                                                                                
+  prev = checkout HEAD^1
   next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
   lsch = "!f() { git diff --name-status -r \"HEAD~$1\"; }; f"
   timesheet = "log --since='1 sunday ago' --until=now --oneline --no-merges"
