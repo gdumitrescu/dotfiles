@@ -82,3 +82,5 @@
   excludesfiles = ~/.gitignore_global
 [push]
   default = simple
+[user]
+  useconfigonly = true
