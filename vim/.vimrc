@@ -76,7 +76,8 @@ Bundle 'Shougo/neocomplcache.git'
 " Bundle 'vim-scripts/autoproto.vim.git'
 " TernJS for vim
 "Bundle 'marijnh/tern_for_vim'
-
+" Line indentation
+Bundle 'Yggdroot/indentLine'
 
 " Appearance options
 set bg=dark
@@ -302,6 +303,15 @@ let g:gist_show_privates = 1
 " GitGutter
 let g:gitgutter_enabled = 1
 highlight clear SignColumn
+
+" IndentLine
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 239
+" for GVim
+let g:indentLine_color_gui = '#A4E57E'
+"for none X terminal
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
 
 " js-beautify npm
 "nnoremap <leader>ff :%!js-beautify -q -j -g -s 2 -f -<CR>
