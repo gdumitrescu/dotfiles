@@ -41,12 +41,15 @@ Bundle 'airblade/vim-gitgutter.git'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim.git'
 
+" HASHIVIM
+Bundle 'hashivim/vim-packer'
+Bundle 'hashivim/vim-terraform'
+Bundle 'hashivim/vim-vagrant'
 
 " RUBY
 " Turbo Ruby tests with tmux
 Bundle 'vim-scripts/turbux.vim.git'
 Bundle 'tpope/vim-rails.git'
-
 
 " EDITOR
 " Brunch support for vim
@@ -312,6 +315,9 @@ let g:indentLine_color_gui = '#A4E57E'
 "for none X terminal
 let g:indentLine_color_tty_light = 7 " (default: 4)
 let g:indentLine_color_dark = 1 " (default: 2)
+
+" HASHIVIM
+let g:terraform_align=1
 
 " js-beautify npm
 "nnoremap <leader>ff :%!js-beautify -q -j -g -s 2 -f -<CR>
