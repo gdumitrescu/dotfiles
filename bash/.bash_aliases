@@ -2,6 +2,9 @@
 alias ..='cd ..'
 alias c='clear'
 alias gti='git'
+alias jj='juju'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias q='exit'
 
 # toggle touchpad
@@ -20,6 +23,9 @@ alias dl='docker ps -l -q'
 # Kill running containers
 alias dkill='docker kill $(docker ps -q)'
 # Delete all containers
-alias drm='docker rm $(docker ps -a -q)'
+alias drmc='docker rm $(docker ps -a -q)'
 # Delete all images
 alias drmi='docker rmi $(docker images -q)'
+# Delete volumes
+alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
+
