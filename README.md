@@ -1,6 +1,6 @@
-### Collection of my dotfiles [![endorse](http://api.coderwall.com/gdumitrescu/endorsecount.png)](http://coderwall.com/gdumitrescu)
+### Collection of my dotfiles
 
- - BASIC SETUP: on your local machine or your free [Nitrous.IO](https://www.nitrous.io/join/7aNCJh74rfk) or [Koding](https://koding.com/?r=gdumitrescu) instance.
+ - BASIC SETUP: on your local machine or your [Cloud9](https://c9.io) workspace.
 
  ```bash
  $ git clone https://github.com/gdumitrescu/dotfiles.git ~/
@@ -30,8 +30,3 @@
 
 ### Thanks
  - Github user: akitaonrails for vim color schemes
- - Nitrous.IO and Koding: for the VMs
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gdumitrescu/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
