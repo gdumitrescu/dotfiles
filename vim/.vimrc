@@ -4,86 +4,89 @@ autocmd! bufwritepost .vimrc source %
 " Map <Leader> key
 let mapleader=","
 
-" let Vundle manage Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" My Bundles here:
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+
+" Plugins:
 
 " UTILS
 " Ctrl-P fuzzy file finder
-Bundle 'kien/ctrlp.vim.git'
+Plugin 'kien/ctrlp.vim.git'
 " Sparkup lets you write HTML code faster
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Tree explorer
-Bundle 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 " Tree explorer tabs
-Bundle 'jistr/vim-nerdtree-tabs.git'
+Plugin 'jistr/vim-nerdtree-tabs.git'
 " Syntax checking
-Bundle 'scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic.git'
 " Powerline status line
-"Bundle 'Lokaltog/vim-powerline.git'
+"Plugin 'Lokaltog/vim-powerline.git'
 " Lean & mean status/tabline for vim that's light as air
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " Utility functions and commands for programming in Vim.
-Bundle 'vim-scripts/L9.git'
+Plugin 'vim-scripts/L9.git'
 " buffer/file/command/tag/etc explorer with fuzzy matching
-" Bundle 'vim-scripts/FuzzyFinder.git'
+" Plugin 'vim-scripts/FuzzyFinder.git'
 " CoVim - real-time collaboration
-"Bundle 'FredKSchott/CoVim'
+"Plugin 'FredKSchott/CoVim'
 
 " GIT
 " Git wrapper
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter.git'
 " Gist
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim.git'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim.git'
 
 " Golang
-Bundle 'fatih/vim-go.git'
+Plugin 'fatih/vim-go.git'
 
 " HASHIVIM
-Bundle 'hashivim/vim-packer'
-Bundle 'hashivim/vim-terraform'
-Bundle 'hashivim/vim-vagrant'
+Plugin 'hashivim/vim-packer'
+Plugin 'hashivim/vim-terraform'
+Plugin 'hashivim/vim-vagrant'
 
 " RUBY
 " Turbo Ruby tests with tmux
-Bundle 'vim-scripts/turbux.vim.git'
-Bundle 'tpope/vim-rails.git'
+Plugin 'vim-scripts/turbux.vim.git'
+Plugin 'tpope/vim-rails.git'
 
 " EDITOR
 " Brunch support for vim
-Bundle 'drichard/vim-brunch.git'
+Plugin 'drichard/vim-brunch.git'
 " CoffeeScript support for vim
-Bundle 'kchmck/vim-coffee-script.git'
+Plugin 'kchmck/vim-coffee-script.git'
 " Jade syntax and indenting       
-Bundle 'vim-scripts/jade.vim.git'
+Plugin 'vim-scripts/jade.vim.git'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
-Bundle 'vim-scripts/taglist.vim.git'
+Plugin 'vim-scripts/taglist.vim.git'
 " TagBar
-Bundle 'majutsushi/tagbar.git'
+Plugin 'majutsushi/tagbar.git'
 " Formatting JS
-Bundle 'maksimr/vim-jsbeautify'
+Plugin 'maksimr/vim-jsbeautify'
 " quoting/parenthesizing made simple
-Bundle 'tpope/vim-surround.git' 
+Plugin 'tpope/vim-surround.git'
 " ack - front for the Perl module
-Bundle 'mileszs/ack.vim.git'
+Plugin 'mileszs/ack.vim.git'
 " ag, A.K.A. the_silver_searcher
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 " multiple selections
-Bundle 'terryma/vim-multiple-cursors.git'
+Plugin 'terryma/vim-multiple-cursors.git'
 " Ultimate auto-completion system for Vim 
 " Set let g:neocomplcache_enable_at_startup = 1 in .vimrc
-Bundle 'Shougo/neocomplcache.git'
+Plugin 'Shougo/neocomplcache.git'
 " Auto display function parameter in preview
-" Bundle 'vim-scripts/autoproto.vim.git'
+" Plugin 'vim-scripts/autoproto.vim.git'
 " TernJS for vim
-"Bundle 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 " Line indentation
-Bundle 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine'
 
 " Appearance options
 set bg=dark
