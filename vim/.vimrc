@@ -41,6 +41,9 @@ Bundle 'airblade/vim-gitgutter.git'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim.git'
 
+" Golang
+Bundle 'fatih/vim-go.git'
+
 " HASHIVIM
 Bundle 'hashivim/vim-packer'
 Bundle 'hashivim/vim-terraform'
