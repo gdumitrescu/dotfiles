@@ -36,6 +36,9 @@ Plugin 'vim-scripts/L9.git'
 " CoVim - real-time collaboration
 "Plugin 'FredKSchott/CoVim'
 
+" ELM
+Bundle 'elmcast/elm-vim'
+
 " GIT
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -302,6 +305,23 @@ let g:ctrlp_max_height = 10
 "  \ 'file': '\v\.(exe|so|dll)$',
 "  \ 'link': 'some_bad_symbolic_links',
 "  \ }
+
+" Elm
+"nnoremap <leader>el :ElmEvalLine<CR>
+"vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+"nnoremap <leader>em :ElmMakeCurrentFile<CR>
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
+let g:elm_jump_to_error = 0
+let g:elm_make_output_file = "elm.js"
+let g:elm_make_show_warnings = 0
+let g:elm_syntastic_show_warnings = 1
+let g:elm_browser_command = ""
+let g:elm_detailed_complete = 0
+let g:elm_format_autosave = 1
+let g:elm_format_fail_silently = 0
+let g:elm_setup_keybindings = 1
 
 " Gist
 "let g:gist_use_password_in_gitconfig = 1
