@@ -9,87 +9,77 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Bundle 'VundleVim/Vundle.vim'
 
 
-" Plugins:
+" Bundles:
 
 " UTILS
 " Ctrl-P fuzzy file finder
-Plugin 'kien/ctrlp.vim.git'
+Bundle 'kien/ctrlp.vim.git'
 " Sparkup lets you write HTML code faster
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Tree explorer
-Plugin 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdtree.git'
 " Tree explorer tabs
-Plugin 'jistr/vim-nerdtree-tabs.git'
+Bundle 'jistr/vim-nerdtree-tabs.git'
 " Syntax checking
-Plugin 'scrooloose/syntastic.git'
-" Powerline status line
-"Plugin 'Lokaltog/vim-powerline.git'
+Bundle 'scrooloose/syntastic.git'
 " Lean & mean status/tabline for vim that's light as air
-Plugin 'bling/vim-airline'
-" Utility functions and commands for programming in Vim.
-Plugin 'vim-scripts/L9.git'
-" buffer/file/command/tag/etc explorer with fuzzy matching
-" Plugin 'vim-scripts/FuzzyFinder.git'
+Bundle 'bling/vim-airline'
 " CoVim - real-time collaboration
-"Plugin 'FredKSchott/CoVim'
+"Bundle 'FredKSchott/CoVim'
+
 
 " ELM
 Bundle 'elmcast/elm-vim'
 
 " GIT
 " Git wrapper
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter.git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter.git'
 " Gist
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim.git'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim.git'
 
 " Golang
-Plugin 'fatih/vim-go.git'
+Bundle 'fatih/vim-go.git'
 
 " HASHIVIM
-Plugin 'hashivim/vim-packer'
-Plugin 'hashivim/vim-terraform'
-Plugin 'hashivim/vim-vagrant'
+Bundle 'hashivim/vim-packer'
+Bundle 'hashivim/vim-terraform'
+Bundle 'hashivim/vim-vagrant'
 
 " RUBY
 " Turbo Ruby tests with tmux
-Plugin 'vim-scripts/turbux.vim.git'
-Plugin 'tpope/vim-rails.git'
+Bundle 'vim-scripts/turbux.vim.git'
+Bundle 'tpope/vim-rails.git'
 
 " EDITOR
 " Brunch support for vim
-Plugin 'drichard/vim-brunch.git'
-" CoffeeScript support for vim
-Plugin 'kchmck/vim-coffee-script.git'
-" Jade syntax and indenting       
-Plugin 'vim-scripts/jade.vim.git'
+Bundle 'drichard/vim-brunch.git'
+" Comment stuff out
+Bundle 'tpope/vim-commentary'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
-Plugin 'vim-scripts/taglist.vim.git'
+Bundle 'vim-scripts/taglist.vim.git'
 " TagBar
-Plugin 'majutsushi/tagbar.git'
+Bundle 'majutsushi/tagbar.git'
 " Formatting JS
-Plugin 'maksimr/vim-jsbeautify'
+Bundle 'maksimr/vim-jsbeautify'
 " quoting/parenthesizing made simple
-Plugin 'tpope/vim-surround.git'
+Bundle 'tpope/vim-surround.git'
 " ack - front for the Perl module
-Plugin 'mileszs/ack.vim.git'
+Bundle 'mileszs/ack.vim.git'
 " ag, A.K.A. the_silver_searcher
-Plugin 'rking/ag.vim'
+Bundle 'rking/ag.vim'
 " multiple selections
-Plugin 'terryma/vim-multiple-cursors.git'
+Bundle 'terryma/vim-multiple-cursors.git'
 " Ultimate auto-completion system for Vim 
-" Set let g:neocomplcache_enable_at_startup = 1 in .vimrc
-Plugin 'Shougo/neocomplcache.git'
-" Auto display function parameter in preview
-" Plugin 'vim-scripts/autoproto.vim.git'
+Bundle 'Shougo/neocomplcache.git'
 " TernJS for vim
-"Plugin 'marijnh/tern_for_vim'
+Bundle 'marijnh/tern_for_vim'
 " Line indentation
-Plugin 'Yggdroot/indentLine'
+Bundle 'Yggdroot/indentLine'
 
 " Appearance options
 set bg=dark
@@ -118,7 +108,6 @@ highlight ColorColumn ctermbg=233
 if exists('&colorcolumn')
   set colorcolumn=80
 endif
-
 
 " Line wrapping on by default
 set wrap
@@ -229,6 +218,7 @@ map <Leader>ss :setlocal spell spelllang=es_es<CR>
 map <Leader>sn :setlocal nospell<CR>
 
 " Enable omni completion.
+" Set let g:neocomplcache_enable_at_startup = 1 in .vimrc
 let g:neocomplcache_enable_at_startup = 1 
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 highlight   Pmenu         ctermfg=0 ctermbg=2
@@ -260,14 +250,6 @@ let g:python_highlight_numbers = 1
 " Configure syntax specific options
 let python_highlight_all = 1
 
-" Enable CoffeeScript
-let coffee_make_options = '--bare'
-let coffee_compile_vert = 1
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab nofoldenable
-"au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-:setl scrollbind
-
 " Run current file in ruby
 imap <Leader>rr <ESC>:!ruby %<CR>
 nmap <Leader>rr :!ruby %<CR>
@@ -297,19 +279,14 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_height = 10
 "let g:ctrlp_user_command = 'find %s -type f'
 
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/node_modules/*
 
-"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-"  \ 'file': '\v\.(exe|so|dll)$',
-"  \ 'link': 'some_bad_symbolic_links',
-"  \ }
 
 " Elm
-"nnoremap <leader>el :ElmEvalLine<CR>
-"vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
-"nnoremap <leader>em :ElmMakeCurrentFile<CR>
+" nnoremap <leader>el :ElmEvalLine<CR>
+" vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+" nnoremap <leader>em :ElmMakeCurrentFile<CR>
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
@@ -371,16 +348,20 @@ highlight link multiple_cursors_visual Visual
 
 "NERDTree
 " load on startup
+autocmd VimEnter * if !argc() | NERDTree | endif
+
+if exists("loaded_nerd_tree")
+  autocmd VimEnter * NERDTree
+endif
+
 "autocmd vimenter * NERDTree
 " close when last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 "NERDTreeTabs
 let g:nerdtree_tabs_open_on_gui_startup=1
 "map <Leader>t <plug>NERDTreeTabsToggle<CR>
 map <Leader>kb :NERDTreeTabsToggle<CR>
-
-" Powerline
-"let g:Powerline_symbols = 'fancy'
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
@@ -397,3 +378,5 @@ let g:syntastic_python_checkers=['pylint']
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
 "noremap : q:I
+execute pathogen#infect()
+call pathogen#helptags()
