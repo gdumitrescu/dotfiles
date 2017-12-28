@@ -27,8 +27,6 @@ Bundle 'jistr/vim-nerdtree-tabs.git'
 Bundle 'scrooloose/syntastic.git'
 " Lean & mean status/tabline for vim that's light as air
 Bundle 'bling/vim-airline'
-" CoVim - real-time collaboration
-"Bundle 'FredKSchott/CoVim'
 
 
 " ELM
@@ -48,7 +46,6 @@ Bundle 'fatih/vim-go.git'
 " HASHIVIM
 Bundle 'hashivim/vim-packer'
 Bundle 'hashivim/vim-terraform'
-Bundle 'hashivim/vim-vagrant'
 
 " RUBY
 " Turbo Ruby tests with tmux
@@ -56,8 +53,6 @@ Bundle 'vim-scripts/turbux.vim.git'
 Bundle 'tpope/vim-rails.git'
 
 " EDITOR
-" Brunch support for vim
-Bundle 'drichard/vim-brunch.git'
 " Comment stuff out
 Bundle 'tpope/vim-commentary'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
