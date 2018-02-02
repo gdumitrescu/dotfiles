@@ -82,5 +82,10 @@
   excludesfiles = ~/.gitignore_global
 [push]
   default = simple
+[rebase]
+  autosquash = true  
 [user]
   useconfigonly = true
+[url "git@github.com:"]
+  pushInsteadOf = https://github.com/
+  pushInsteadOf = git://github.com/
