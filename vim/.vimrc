@@ -20,37 +20,30 @@ Bundle 'kien/ctrlp.vim.git'
 " Sparkup lets you write HTML code faster
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Tree explorer
-Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdtree'
 " Tree explorer tabs
-Bundle 'jistr/vim-nerdtree-tabs.git'
+Bundle 'jistr/vim-nerdtree-tabs'
 " Syntax checking
-Bundle 'scrooloose/syntastic.git'
+Bundle 'scrooloose/syntastic'
 " Lean & mean status/tabline for vim that's light as air
 Bundle 'bling/vim-airline'
 
 
-" ELM
-Bundle 'elmcast/elm-vim'
-
 " GIT
 " Git wrapper
 Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter.git'
-" Gist
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim.git'
+Bundle 'airblade/vim-gitgutter'
 
 " Golang
-Bundle 'fatih/vim-go.git'
+Bundle 'fatih/vim-go'
 
 " HASHIVIM
-Bundle 'hashivim/vim-packer'
 Bundle 'hashivim/vim-terraform'
 
 " RUBY
 " Turbo Ruby tests with tmux
 Bundle 'vim-scripts/turbux.vim.git'
-Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-rails'
 
 " EDITOR
 " Comment stuff out
@@ -58,23 +51,28 @@ Bundle 'tpope/vim-commentary'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 Bundle 'vim-scripts/taglist.vim.git'
 " TagBar
-Bundle 'majutsushi/tagbar.git'
+Bundle 'majutsushi/tagbar'
 " Formatting JS
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'prettier/vim-prettier'
 " quoting/parenthesizing made simple
-Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-surround'
 " ack - front for the Perl module
-Bundle 'mileszs/ack.vim.git'
+Bundle 'mileszs/ack.vim'
 " ag, A.K.A. the_silver_searcher
 Bundle 'rking/ag.vim'
 " multiple selections
-Bundle 'terryma/vim-multiple-cursors.git'
-" Ultimate auto-completion system for Vim 
-Bundle 'Shougo/neocomplcache.git'
+Bundle 'terryma/vim-multiple-cursors'
+" Ultimate auto-completion system for Vim
+Bundle 'Shougo/neocomplcache'
 " TernJS for vim
 Bundle 'marijnh/tern_for_vim'
 " Line indentation
 Bundle 'Yggdroot/indentLine'
+
+" All of Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Appearance options
 set bg=dark
@@ -214,7 +212,7 @@ map <Leader>sn :setlocal nospell<CR>
 
 " Enable omni completion.
 " Set let g:neocomplcache_enable_at_startup = 1 in .vimrc
-let g:neocomplcache_enable_at_startup = 1 
+let g:neocomplcache_enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 highlight   Pmenu         ctermfg=0 ctermbg=2
 highlight   PmenuSel      ctermfg=0 ctermbg=7
@@ -305,6 +303,9 @@ let g:gist_show_privates = 1
 let g:gitgutter_enabled = 1
 highlight clear SignColumn
 
+" vim-go
+let g:go_version_warning = 0
+
 " IndentLine
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 239
@@ -369,9 +370,14 @@ let g:sparkup='sparkup' "(Default: 'sparkup') -
 let g:sparkupExecuteMapping = '<c-e>' "(Default: '<c-e>') -
 
 "Syntastic
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-"noremap : q:I
-execute pathogen#infect()
-call pathogen#helptags()
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_python_checkers=['pylint']
+"let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
