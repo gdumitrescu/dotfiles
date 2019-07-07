@@ -105,7 +105,7 @@ endif
 " Line wrapping on by default
 set wrap
 set linebreak
-set modeline " look for embedded modelines
+set nomodeline " look for embedded modelines - CVE
 
 " Use spaces instead of TABs
 set tabstop=2
